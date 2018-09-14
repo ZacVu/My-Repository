@@ -1,0 +1,45 @@
+%(a) Create a program generates a random value between 1 and N, where N is an integer specified by the user.
+%(b) Modify your program to allow the user to specify the starting value and the ending value, both integers.
+%(c) Modify your program to allow the user to specify the integer step between values.  For example, numbers between -5 and 5 with a step of 2 could be (at random) -5, -3, -1, 1, 3, 5. 
+%(d) Modify your program so all values are real (decimal) values. 
+put "a)"
+var N: int
+put "Input a highest value: " ..
+get N
+put "Randomly generated value between 1 and ", N, ": ", Rand.Int(1,N)
+put "b)"
+var low, high: int
+put "Input lowest value: " ..
+get low
+put "Output highest value: " ..
+get high
+put "Randomly generate value between ", low, " and ", high, ": ", Rand.Int(low, high)
+put "c)"
+%Counting integer steps between values from highest value
+put "Input lowest value: " ..
+get low
+put "Output highest value: " ..
+get high
+var steps: int
+var randN: real
+put "Input the integer steps between values: " ..
+get steps
+randN := Rand.Int(low, high)
+put "Randomly generated number: ", ((high - randN)/steps - floor((high - randN)/steps))*steps+randN
+/*
+put "d)"
+var decimal: int
+put "Round to places(1 to 3): " ..
+get decimal
+put "Input lowest value: " ..
+get low
+put "Output highest value: " ..
+get high
+put "Input the integer steps between values: " ..
+get steps
+randN := Rand.Int(low*10*decimal, high*10*decimal)/(10*decimal)
+put "Randomly generated number: ", floor(((high - randN)/steps - floor((high - randN)/steps))*steps+randN) + ((high - randN)/steps - floor((high - randN)/steps))
+
+
+
+ 
