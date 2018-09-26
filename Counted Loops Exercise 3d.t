@@ -1,4 +1,4 @@
-% 3c
+% 3d
 var num: int
 var symbol: string
 put "Number of symbols to output: " ..
